@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TindaCount Web version 2</title>
+    <meta property="og:title" content="TindaCount Web version 2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+      </script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("-UXra_Nirkts87z2l");
+   })();
+</script>
+ <script src="script.js"></script>
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Noto Sans;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background-color: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Patua+One:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <style>
+      [data-thq="thq-dropdown"]:hover > [data-thq="thq-dropdown-list"] {
+          display: flex;
+        }
+
+        [data-thq="thq-dropdown"]:hover > div [data-thq="thq-dropdown-arrow"] {
+          transform: rotate(90deg);
+        }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-page-container">
+        <div class="top-bar-container">
+          <img
+            alt="image"
+            src="public/396782043_1347182306171881_2954067650042030753_n_1_-removebg-preview-200h.png"
+            class="top-bar-image"
+          />
+          <span class="top-bar-text"><span>TindaCount</span></span>
+          <div class="top-bar-container1">
+            <div data-thq="thq-dropdown" class="top-bar-thq-dropdown list-item">
+              <div
+                data-thq="thq-dropdown-toggle"
+                class="top-bar-dropdown-toggle"
+              >
+                <span class="top-bar-text01">
+                  <span class="top-bar-text02">Menu</span>
+                  <br />
+                </span>
+                <div
+                  data-thq="thq-dropdown-arrow"
+                  class="top-bar-dropdown-arrow"
+                >
+                  <svg viewBox="0 0 1024 1024" class="top-bar-icon">
+                    <path d="M426 726v-428l214 214z"></path>
+                  </svg>
+                </div>
+              </div>
+              <ul data-thq="thq-dropdown-list" class="top-bar-dropdown-list">
+                <li data-thq="thq-dropdown" class="top-bar-dropdown list-item">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="top-bar-dropdown-toggle1"
+                  >
+                    <a href="#About" class="top-bar-link">
+                      <span>About</span>
+                      <br />
+                    </a>
+                  </div>
+                </li>
+                <li data-thq="thq-dropdown" class="top-bar-dropdown1 list-item">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="top-bar-dropdown-toggle2"
+                  >
+                    <a href="#Teams" class="top-bar-link1">Team</a>
+                  </div>
+                </li>
+                <li data-thq="thq-dropdown" class="top-bar-dropdown2 list-item">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="top-bar-dropdown-toggle3"
+                  >
+                    <a href="#Download" class="top-bar-link2">
+                      <span>Download</span>
+                      <br />
+                    </a>
+                  </div>
+                </li>
+                <li data-thq="thq-dropdown" class="top-bar-dropdown3 list-item">
+                  <div
+                    data-thq="thq-dropdown-toggle"
+                    class="top-bar-dropdown-toggle4"
+                  >
+                    <a href="#contact-form-4-message" class="top-bar-link3">
+                      <span>Contact us</span>
+                      <br />
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="i-tcounts-container">
+          <div class="i-tcounts-container1">
+            <animate-on-reveal
+              animation="fadeInDown"
+              duration="2000ms"
+              delay="0s"
+              direction="normal"
+              easing="ease-in-out"
+              iteration="1"
+            >
+              <span data-thq-animate-on-reveal="true" class="i-tcounts-text">
+                <span>Beyond Counting</span>
+              </span>
+            </animate-on-reveal>
+          </div>
+          <animate-on-reveal
+            animation="bounceIn"
+            duration="6000ms"
+            delay="0s"
+            direction="normal"
+            easing="ease-in-out"
+            iteration="1"
+          >
+            <img
+              alt="image"
+              src="public/tindalogo1-500w.png"
+              data-thq-animate-on-reveal="true"
+              class="i-tcounts-image"
+            />
+          </animate-on-reveal>
+          <animate-on-reveal
+            animation="fadeInUp"
+            duration="3000ms"
+            delay="0s"
+            direction="normal"
+            easing="ease-in-out"
+            iteration="1"
+          >
+            <span data-thq-animate-on-reveal="true" class="i-tcounts-text1">
+              <span>
+                Unlock the potential of seamless stock management with
+                TindaCount, your go-to desktop app for optimizing efficiency and
+                daily sales revenue. This innovative inventory system is
+                designed to revolutionize the way you handle stocks, providing a
+                user-friendly interface and a plethora of features to streamline
+                your business operations.
+              </span>
+            </span>
+          </animate-on-reveal>
+        </div>
+        <div id="About" class="about-container">
+          <div class="about-container1">
+            <animate-on-reveal
+              animation="bounceIn"
+              duration="3000ms"
+              delay="0s"
+              direction="normal"
+              easing="ease-in-out"
+              iteration="1"
+            >
+              <span data-thq-animate-on-reveal="true" class="about-text">
+                <span>About Us TindaCounters!</span>
+              </span>
+            </animate-on-reveal>
+          </div>
+          <div class="about-container2">
+            <animate-on-reveal
+              animation="bounceIn"
+              duration="3000ms"
+              delay="nullms"
+              direction="normal"
+              easing="ease-in-out"
+              iteration="1"
+            >
+              <span data-thq-animate-on-reveal="true" class="about-text1">
+                <span>
+                  Maximize your stock management capabilities effortlessly with
+                  TindaCount, your ultimate desktop solution for enhancing
+                  efficiency and boosting daily sales revenue. This cutting-edge
+                  inventory system is engineered to transform your stock
+                  handling methods, offering an intuitive interface and a wide
+                  array of features to simplify your business processes.
+                </span>
+              </span>
+            </animate-on-reveal>
+          </div>
+          <img
+            alt="image"
+            src="public/itncountnposter-600h.png"
+            class="about-image"
+          />
+        </div>
+        <div id="Teams" class="teams-container">
+          <div class="teams-team8 thq-section-padding">
+            <div class="teams-max-width thq-section-max-width">
+              <div class="teams-section-title">
+                <div class="teams-content">
+                  <h2 class="teams-text thq-heading-2">
+                    <span>Meet Our Team!</span>
+                  </h2>
+                </div>
+              </div>
+              <div
+                data-thq="slider"
+                data-loop="true"
+                data-autoplay="true"
+                data-navigation="true"
+                data-pagination="true"
+                class="teams-slider swiper"
+              >
+                <div data-thq="slider-wrapper" class="swiper-wrapper">
+                  <div
+                    data-thq="slider-slide"
+                    class="teams-slider-slide swiper-slide"
+                  >
+                    <div class="teams-card">
+                      <img
+                        alt="image"
+                        src="public/cbhkqq3w-1400w.jpg"
+                        class="teams-image"
+                      />
+                      <h2 class="teams-sad"><span>Leo Jei D. Bual</span></h2>
+                      <span class="teams-text01">
+                        <span>Chief Executive Officer</span>
+                      </span>
+                      <p class="teams-text02">
+                        <span>
+                          Hello, I'm Leo Jei D. Bual and my hobbies are playing
+                          video games and i am currently studying at STI College
+                          Las Piñas and my dream is to be a professional in
+                          programming.
+                        </span>
+                      </p>
+                      <div class="teams-content01">
+                        <div class="teams-title"></div>
+                      </div>
+                    </div>
+                    <div class="teams-card01">
+                      <img
+                        alt="image"
+                        src="public/434720798_1171995397507222_3348735093018714820_n-1400w.jpg"
+                        class="teams-image01"
+                      />
+                      <h2 class="teams-text03"><span>Jerzey Tajo</span></h2>
+                      <span class="teams-text04">
+                        <span>Chief Administrative Aide</span>
+                      </span>
+                      <p class="teams-text05">
+                        <span>
+                          Jerzey Tajo Hi, I'm Jerzey Tajo! Aside from IT and
+                          Administrative work, I'm also an amateur voice actor
+                          and audio editor. I aspire to become well versed in
+                          all of the fields I'm currently pursuing one day.
+                        </span>
+                      </p>
+                      <div class="teams-content02">
+                        <div class="teams-container1">
+                          <div class="teams-container2">
+                            <div class="teams-title01"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="teams-card02">
+                      <img
+                        alt="image"
+                        src="public/434062674_1555677778620489_1000682603517959906_n-1400w.jpg"
+                        class="teams-image02"
+                      />
+                      <div class="teams-container3">
+                        <div class="teams-content03">
+                          <div class="teams-title02"></div>
+                        </div>
+                        <h3 class="teams-text06">
+                          <span>Levin Luis I. Lustado</span>
+                        </h3>
+                      </div>
+                      <span class="teams-text07">
+                        <span>Office Administrator</span>
+                      </span>
+                      <h3 class="teams-text08">
+                        <span>
+                          Hey y’all My name is Levin Luis I. Lustado when I’m
+                          not working here at IT Count you can find me online as
+                          my hobby is that i am a car dealer. its one of my
+                          dreams to have my own car dealership
+                        </span>
+                      </h3>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="teams-slider-slide1 swiper-slide"
+                  >
+                    <div class="teams-card03">
+                      <img
+                        alt="image"
+                        src="public/433049590_418147667468219_4378939098030478114_n-1400w.jpg"
+                        class="teams-image03"
+                      />
+                      <div class="teams-container4">
+                        <h3 class="teams-text09">
+                          <span>Paul Quincy P. Espineda</span>
+                        </h3>
+                        <div class="teams-content04"></div>
+                      </div>
+                      <span><span>Administrative aide</span></span>
+                      <p class="teams-text11">
+                        <span>
+                          Hello there, My name is Paul Quincy P. Espineda. I am
+                          an IT student of STI College Las Pinas. My hobbies
+                          include Streaming on Twitch, driving, video editing,
+                          and graphic design. my dream is to follow in my
+                          father's footsteps and have success
+                        </span>
+                      </p>
+                    </div>
+                    <div class="teams-card04">
+                      <img
+                        alt="image"
+                        src="public/434032289_1622120245210190_19632218092196619_n1-1400w.jpg"
+                        class="teams-image04"
+                      />
+                      <h3 class="teams-text12">
+                        <span>Jaycrew Villanueva</span>
+                      </h3>
+                      <span><span>Head It Coordinator</span></span>
+                      <p class="teams-text14">
+                        <span>
+                          Hii Im Jaycrew Villanueva i study at STI las piñas
+                          college after my duties at IT Count id like to end my
+                          day with a game of pool as its may favorite pastime
+                          and hobby!
+                        </span>
+                      </p>
+                    </div>
+                    <div class="teams-card05">
+                      <img
+                        alt="image"
+                        src="public/434002770_1456440951923900_7771473461867975904_n-1400w.jpg"
+                        class="teams-image05"
+                      />
+                      <div class="teams-container5">
+                        <h3 class="teams-text15">
+                          <span>Sam Lerian, Delgado</span>
+                        </h3>
+                        <div class="teams-content05">
+                          <div class="teams-title03"></div>
+                        </div>
+                      </div>
+                      <span><span>Deputy IT Coordinator</span></span>
+                      <p class="teams-text17">
+                        <span>
+                          Hello, My name is Sam Lerian Delgado im a student at
+                          STI las pinas College and my dream is to become a good
+                          Coder and Artist which is making arts.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-thq="slider-pagination"
+                  class="teams-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+                >
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                </div>
+                <div
+                  data-thq="slider-button-prev"
+                  class="teams-slider-button-prev swiper-button-prev"
+                ></div>
+                <div
+                  data-thq="slider-button-next"
+                  class="swiper-button-next"
+                ></div>
+              </div>
+              <div
+                data-thq="slider"
+                data-navigation="true"
+                data-pagination="true"
+                class="teams-slider1 swiper"
+              >
+                <div data-thq="slider-wrapper" class="swiper-wrapper">
+                  <div
+                    data-thq="slider-slide"
+                    class="teams-slider-slide2 swiper-slide"
+                  >
+                    <div class="teams-card06">
+                      <div class="teams-content06">
+                        <div class="teams-title04">
+                          <img
+                            alt="image"
+                            src="public/cbhkqq3w-1400w.jpg"
+                            class="teams-image06"
+                          />
+                        </div>
+                      </div>
+                      <h3 class="teams-text18"><span>Leo Jei D. Bual</span></h3>
+                      <span class="teams-text19">
+                        <span>chief executive officer</span>
+                      </span>
+                      <span class="teams-text20">
+                        <span>
+                          Hello, I'm Leo Jei D. Bual and my hobbies are playing
+                          video games and i am currently studying at STI College
+                          Las Piñas and my dream is to be a professional in
+                          programming.
+                        </span>
+                      </span>
+                      <div class="teams-social-icons"></div>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="teams-slider-slide3 swiper-slide"
+                  >
+                    <div class="teams-card07">
+                      <div class="teams-content07">
+                        <div class="teams-title05"></div>
+                      </div>
+                      <img
+                        alt="image"
+                        src="public/434720798_1171995397507222_3348735093018714820_n-1400w.jpg"
+                        class="teams-image07"
+                      />
+                      <div class="teams-container6">
+                        <h3 class="teams-text21"><span>Jerzey Tajo</span></h3>
+                        <div class="teams-social-icons1"></div>
+                      </div>
+                      <span class="teams-text22">
+                        <span>chief administrative aide</span>
+                      </span>
+                      <span class="teams-text23">
+                        <span>
+                          Jerzey Tajo Hi, I'm Jerzey Tajo! Aside from IT and
+                          Administrative work, I'm also an amateur voice actor
+                          and audio editor. I aspire to become well versed in
+                          all of the fields I'm currently pursuing one day.
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="teams-slider-slide4 swiper-slide"
+                  >
+                    <div class="teams-card08">
+                      <div class="teams-content08">
+                        <div class="teams-title06"></div>
+                      </div>
+                      <img
+                        alt="image"
+                        src="public/434062674_1555677778620489_1000682603517959906_n-1400w.jpg"
+                        class="teams-image08"
+                      />
+                      <h3 class="teams-text24">
+                        <span>Levin Luis I. Lustado</span>
+                      </h3>
+                      <span class="teams-text25">
+                        <span>office administrator</span>
+                      </span>
+                      <span class="teams-text26">
+                        <span>
+                          Hey y’all My name is Levin Luis I. Lustado when I’m
+                          not working here at IT Count you can find me online as
+                          my hobby is that i am a car dealer. its one of my
+                          dreams to have my own car dealership
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="teams-slider-slide5 swiper-slide"
+                  >
+                    <div class="teams-card09">
+                      <div class="teams-content09">
+                        <div class="teams-title07"></div>
+                      </div>
+                      <img
+                        alt="image"
+                        src="public/433049590_418147667468219_4378939098030478114_n-1400w.jpg"
+                        class="teams-image09"
+                      />
+                      <p class="teams-text27">
+                        <span>Paul Quincy P. Espineda.</span>
+                      </p>
+                      <span class="teams-text28">
+                        <span>administrative aide</span>
+                      </span>
+                      <span class="teams-text29">
+                        <span>
+                          Hello there, My name is Paul Quincy P. Espineda. I am
+                          an IT student of STI College Las Pinas. My hobbies
+                          include Streaming on Twitch, driving, video editing,
+                          and graphic design. my dream is to follow in my
+                          father's footsteps and have success
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="teams-slider-slide6 swiper-slide"
+                  >
+                    <div class="teams-card10">
+                      <div class="teams-content10">
+                        <div class="teams-title08"></div>
+                      </div>
+                      <img
+                        alt="image"
+                        src="public/434032289_1622120245210190_19632218092196619_n1-1400w.jpg"
+                        class="teams-image10"
+                      />
+                      <h3 class="teams-text30">
+                        <span>Jaycrew Villanueva</span>
+                      </h3>
+                      <span class="teams-text31">
+                        <span>head it coordinator</span>
+                      </span>
+                      <span class="teams-text32">
+                        <span>
+                          Hii Im Jaycrew Villanueva i study at STI las piñas
+                          college after my duties at IT Count id like to end my
+                          day with a game of pool as its may favorite pastime
+                          and hobby!
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    data-thq="slider-slide"
+                    class="teams-slider-slide7 swiper-slide"
+                  >
+                    <div class="teams-card11">
+                      <div class="teams-content11">
+                        <div class="teams-title09"></div>
+                      </div>
+                      <img
+                        alt="image"
+                        src="public/434002770_1456440951923900_7771473461867975904_n-1400w.jpg"
+                        class="teams-image11"
+                      />
+                      <h3 class="teams-text33">
+                        <span>Sam Lerian Delgado</span>
+                      </h3>
+                      <span class="teams-text34">
+                        <span>deputy it coordinator</span>
+                      </span>
+                      <span class="teams-text35">
+                        <span>
+                          Hello, My name is Sam Lerian Delgado im a student at
+                          STI las pinas College and my dream is to become a good
+                          Coder and Artist which is making arts.
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-thq="slider-pagination"
+                  class="teams-slider-pagination1 swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
+                >
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                  <div
+                    data-thq="slider-pagination-bullet"
+                    class="swiper-pagination-bullet"
+                  ></div>
+                </div>
+                <div
+                  data-thq="slider-button-prev"
+                  class="swiper-button-prev"
+                ></div>
+                <div
+                  data-thq="slider-button-next"
+                  class="swiper-button-next"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Download" class="download-container">
+          <div class="download-container1">
+            <h1 class="download-text"><span>Download The TindaCount!</span></h1>
+            <span class="download-text1">
+              <span>On Windows 7,8,10,11</span>
+            </span>
+          </div>
+          <img
+            alt="image"
+            src="public/screenshot%202024-05-06%20035414-400h.png"
+            class="download-image"
+          />
+          <animate-on-reveal
+            animation="pulse"
+            duration="3000ms"
+            delay="0s"
+            direction="normal"
+            easing="linear"
+            iteration="1"
+          >
+            <a
+              href="https://example.com"
+              data-thq-animate-on-reveal="true"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="download-link"
+            >
+              <span>Click Here To Download</span>
+            </a>
+          </animate-on-reveal>
+          <img
+            alt="image"
+            src="public/itncountnposter_1_-removebg-preview-1100h.png"
+            class="download-image1"
+          />
+          <span class="download-text2"><span>Soon On all Mobile!</span></span>
+        </div>
+        <div class="contact-form4-contact9 thq-section-padding">
+          <div
+            class="thq-flex-row thq-section-max-width contact-form4-max-width"
+          >
+            <div class="contact-form4-content thq-flex-column">
+              <div class="contact-form4-section-title thq-card">
+                <div class="contact-form4-content1">
+                  <h3 class="contact-form4-text thq-heading-2">
+                    <span>Get in Touch With Us TindaCounts!</span>
+                  </h3>
+                  <span class="contact-form4-text1 thq-body-small">
+                    <span>
+                      Have a question or need more information? Fill out the
+                      form below and we'll get back to you as soon as possible.
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <form onsubmit="return false" class="thq-card">
+                <div class="contact-form4-input">
+                  <label
+                    for="contact-form-4-name"
+                    class="contact-form4-text2 thq-body-small"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-form-4-name"
+                    placeholder="Name"
+                    class="contact-form4-text-input thq-input"
+                  />
+                </div>
+                <div class="contact-form4-input1">
+                  <label
+                    for="contact-form-4-email"
+                    class="contact-form4-text3 thq-body-small"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="contact-form-4-email"
+                    required="true"
+                    placeholder="Email"
+                    class="thq-input"
+                  />
+                </div>
+                <div class="contact-form4-container">
+                  <label
+                    for="contact-form-4-message"
+                    class="contact-form4-text4 thq-body-small"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="contact-form-4-message"
+                    rows="3"
+                    placeholder="Enter your message"
+                    class="thq-input"
+                  ></textarea>
+                </div>
+                <div class="contact-form4-checkbox">
+                  <input
+                    type="checkbox"
+                    id="contact-form-4-check"
+                    checked="true"
+                    required="true"
+                    class="thq-checkbox"
+                  />
+                  <label
+                    for="contact-form-4-check"
+                    class="contact-form4-text5 thq-body-small"
+                  >
+                    I accept the Terms
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  onclick="sendMail()"
+                  class="contact-form4-button thq-button-filled"
+                >
+                  <span class="contact-form4-action1 thq-body-small">
+                    <span>submit</span>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="down-bar-container">
+          <div class="down-bar-container1">
+            <img
+              alt="image"
+              src="public/396782043_1347182306171881_2954067650042030753_n_1_-removebg-preview-200h.png"
+              class="down-bar-image"
+            />
+          </div>
+          <div class="down-bar-container2">
+            <span class="down-bar-text"><span>Follow us:</span></span>
+            <a
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="down-bar-link"
+            >
+              <span>Facebook</span>
+            </a>
+            <a
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="down-bar-link1"
+            >
+              <span>Twitter</span>
+            </a>
+            <a
+              href="https://example.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="down-bar-link2"
+            >
+              <span>Instagram</span>
+            </a>
+          </div>
+          <div class="down-bar-container3">
+            <span class="down-bar-text1">
+              <span>
+                Copyright Â©2023-2024 TindaCount Inc. All Right Reserved.
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/react-components/dist/animate-on-reveal.umd.js"
+    ></script>
+  </body>
+</html>
